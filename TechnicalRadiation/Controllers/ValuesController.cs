@@ -7,7 +7,7 @@ using TechnicalRadiation.Services;
 
 namespace TechnicalRadiation.Controllers
 {
-    [Route("api/rentals")]
+    [Route("api")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
