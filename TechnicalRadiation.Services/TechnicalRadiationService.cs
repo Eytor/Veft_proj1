@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TechnicalRadiation.Models.Dtos;
 using TechnicalRadiation.Repositories;
@@ -8,9 +9,9 @@ namespace TechnicalRadiation.Services
     {
         private TechnicalRadiationRepository _technicalRadiationRepo = new TechnicalRadiationRepository();
 
-        public IEnumerable<NewsItemDto> GetAllNews()
+        public IEnumerable<NewsItemDto> GetAllNews(int pageSize)
         {
-            return _technicalRadiationRepo.GetAllNewsItems();
+            return _technicalRadiationRepo.GetAllNewsItems(pageSize);
         }
     }
 }
