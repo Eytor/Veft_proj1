@@ -21,10 +21,11 @@ namespace TechnicalRadiation.Controllers
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
+        [Route("{id}")]
+        [HttpGet]
         public ActionResult<string> Get(int id)
         {
-            return "value";
+            return Ok(_technicalRadiationService.GetNewsById(id));
         }
 
         // POST api/values

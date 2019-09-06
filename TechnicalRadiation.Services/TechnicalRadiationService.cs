@@ -13,5 +13,10 @@ namespace TechnicalRadiation.Services
         {
             return _technicalRadiationRepo.GetAllNewsItems(pageSize);
         }
+
+        public NewsItemDetailDto GetNewsById(int id)
+        {
+            return _technicalRadiationRepo.GetNewsById(id);
+        }
     }
 }
