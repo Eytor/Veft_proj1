@@ -18,5 +18,15 @@ namespace TechnicalRadiation.Services
         {
             return _technicalRadiationRepo.GetNewsById(id);
         }
+
+        public IEnumerable<CategoryDto> getAllCategories()
+        {
+            return _technicalRadiationRepo.getAllCategories();
+        }
+
+        public CategoryDetailDto GetCategoryById(int id)
+        {
+            return _technicalRadiationRepo.GetCategoryById(id);
+        }
     }
 }

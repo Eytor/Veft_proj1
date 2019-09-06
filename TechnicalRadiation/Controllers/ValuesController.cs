@@ -12,7 +12,7 @@ namespace TechnicalRadiation.Controllers
     public class ValuesController : ControllerBase
     {
         private TechnicalRadiationService _technicalRadiationService = new TechnicalRadiationService();
-        // GET api/values
+        // GET api/
         [Route("")]
         [HttpGet]
         public IActionResult GetAllNews([FromQuery] int pageSize)
@@ -20,12 +20,28 @@ namespace TechnicalRadiation.Controllers
             return Ok(_technicalRadiationService.GetAllNews(pageSize));
         }
 
-        // GET api/values/5
-        [Route("{id}")]
+        // GET api/5
+        [Route("{id:int}")]
         [HttpGet]
-        public ActionResult<string> Get(int id)
+        public ActionResult<string> GetNewsById(int id)
         {
             return Ok(_technicalRadiationService.GetNewsById(id));
+        }
+
+        // GET api/categories
+        [Route("categories")]
+        [HttpGet]
+        public IActionResult GetAllCategories()
+        {
+            return Ok(_technicalRadiationService.getAllCategories());
+        }
+
+        // GET api/categories/1
+        [Route("categories/{id:int}")]
+        [HttpGet]
+        public ActionResult<string> GetCategoryById(int id)
+        {
+            return Ok(_technicalRadiationService.GetCategoryById(id));
         }
 
         // POST api/values

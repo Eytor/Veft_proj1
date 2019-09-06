@@ -6,8 +6,20 @@ namespace TechnicalRadiation.Repositories.Data
 {
   public class DataProvider
   {
+    private static readonly string _admin = "TechnicalRadiationAdmin";
     public static List<NewsItem> NewsItems = new List<NewsItem>
     {
+      new NewsItem
+      {
+          Id = 0,
+          Title = "news",
+          ShortDescription = "A short description of the news article",
+          LongDescription ="A full description of the news article",
+          PublishDate = DateTime.Now,
+          ModifiedBy = _admin,
+          CreatedDate = DateTime.Now,
+          ModifiedDate = DateTime.Now
+      },
       new NewsItem
       {
           Id = 1,
@@ -15,7 +27,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -26,7 +38,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -37,7 +49,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -48,7 +60,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -59,7 +71,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -70,7 +82,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -81,7 +93,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -92,7 +104,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -103,7 +115,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -114,7 +126,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -125,7 +137,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -136,7 +148,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -147,7 +159,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -158,7 +170,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -169,7 +181,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -180,7 +192,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -191,7 +203,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -202,7 +214,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -213,7 +225,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -224,7 +236,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -235,7 +247,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -246,7 +258,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -257,7 +269,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -268,7 +280,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -279,7 +291,7 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       },
@@ -290,11 +302,156 @@ namespace TechnicalRadiation.Repositories.Data
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
-          ModifiedBy = "TechnicalRadiationAdmin",
+          ModifiedBy = _admin,
           CreatedDate = DateTime.Now,
           ModifiedDate = DateTime.Now
       }
 
     };
+
+    public static List<Category> Categories = new List<Category>
+    {
+      new Category
+      {
+        Id = 0,
+        Name = "Gereral",
+        Slug = "general",
+        ModifiedBy = _admin,
+        CreatedDate = DateTime.Now,
+        ModifiedDate = DateTime.Now
+      },
+      new Category
+      {
+        Id = 1,
+        Name = "Gadets",
+        Slug = "gadets",
+        ModifiedBy = _admin,
+        CreatedDate = DateTime.Now,
+        ModifiedDate = DateTime.Now
+      },
+      new Category
+      {
+        Id = 2,
+        Name = "Sports",
+        Slug = "sports",
+        ModifiedBy = _admin,
+        CreatedDate = DateTime.Now,
+        ModifiedDate = DateTime.Now
+      }
+    };
+
+    public static List<NewsItemCategories> NewsItemCategories = new List<NewsItemCategories>
+    {
+      new NewsItemCategories {
+        NewsItemId = 0,
+        CategoryId = 0
+      },
+      new NewsItemCategories {
+        NewsItemId = 1,
+        CategoryId = 1
+      },
+      new NewsItemCategories {
+        NewsItemId = 2,
+        CategoryId = 1
+      },
+      new NewsItemCategories {
+        NewsItemId = 3,
+        CategoryId = 1
+      },
+      new NewsItemCategories {
+        NewsItemId = 4,
+        CategoryId = 1
+      },
+      new NewsItemCategories {
+        NewsItemId = 5,
+        CategoryId = 1
+      },
+      new NewsItemCategories {
+        NewsItemId = 6,
+        CategoryId = 1
+      },
+      new NewsItemCategories {
+        NewsItemId = 7,
+        CategoryId = 1
+      },
+      new NewsItemCategories {
+        NewsItemId = 8,
+        CategoryId = 1
+      },
+      new NewsItemCategories {
+        NewsItemId = 9,
+        CategoryId = 1
+      },
+      new NewsItemCategories {
+        NewsItemId = 10,
+        CategoryId = 1
+      },
+      new NewsItemCategories {
+        NewsItemId = 11,
+        CategoryId = 1
+      },
+      new NewsItemCategories {
+        NewsItemId = 12,
+        CategoryId = 1
+      },
+      new NewsItemCategories {
+        NewsItemId = 13,
+        CategoryId = 1
+      },
+      new NewsItemCategories {
+        NewsItemId = 14,
+        CategoryId = 2
+      },
+      new NewsItemCategories {
+        NewsItemId = 15,
+        CategoryId = 2
+      },
+      new NewsItemCategories {
+        NewsItemId = 16,
+        CategoryId = 2
+      },
+      new NewsItemCategories {
+        NewsItemId = 17,
+        CategoryId = 2
+      },
+      new NewsItemCategories {
+        NewsItemId = 18,
+        CategoryId = 2
+      },
+      new NewsItemCategories {
+        NewsItemId = 19,
+        CategoryId = 2
+      },
+      new NewsItemCategories {
+        NewsItemId = 20,
+        CategoryId = 2
+      },
+      new NewsItemCategories {
+        NewsItemId = 21,
+        CategoryId = 2
+      },
+      new NewsItemCategories {
+        NewsItemId = 22,
+        CategoryId = 2
+      },
+      new NewsItemCategories {
+        NewsItemId = 23,
+        CategoryId = 2
+      },
+      new NewsItemCategories {
+        NewsItemId = 24,
+        CategoryId = 2
+      },
+      new NewsItemCategories {
+        NewsItemId = 25,
+        CategoryId = 2
+      },
+      new NewsItemCategories {
+        NewsItemId = 26,
+        CategoryId = 2
+      }
+    };
   }
+
+
 }

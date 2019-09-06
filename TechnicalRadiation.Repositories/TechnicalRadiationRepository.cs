@@ -16,6 +16,7 @@ namespace TechnicalRadiation.Repositories
                 ShortDescription = r.ShortDescription
             });
         }
+
         public NewsItemDetailDto GetNewsById(int id)
         {
             var news = DataProvider.NewsItems.FirstOrDefault(r => r.Id == id);
@@ -30,6 +31,30 @@ namespace TechnicalRadiation.Repositories
                 ShortDescription = news.ShortDescription,
                 LongDescription = news.LongDescription,
                 PublishDate = news.PublishDate
+            };
+        }
+
+        public IEnumerable<CategoryDto> getAllCategories()
+        {
+            return DataProvider.Categories.Select(r => new CategoryDto{
+                Id = r.Id,
+                Name = r.Name ,
+                Slug = r.Slug
+            });
+        }
+
+        public CategoryDetailDto GetCategoryById(int id)
+        {
+            var cat = DataProvider.Categories.FirstOrDefault(r => r.Id == id);
+            if (cat == null)
+            {
+                return null;
+            }
+            return new CategoryDetailDto {
+                Id = cat.Id,
+                Name = cat.Name,
+                Slug = cat.Slug,
+                NumberOfNewsItems = DataProvider.NewsItemCategories.Count(r => r.CategoryId == cat.Id)
             };
         }
     }
