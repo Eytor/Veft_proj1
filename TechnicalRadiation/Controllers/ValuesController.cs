@@ -15,9 +15,9 @@ namespace TechnicalRadiation.Controllers
         // GET api/
         [Route("")]
         [HttpGet]
-        public IActionResult GetAllNews([FromQuery] int pageSize)
+        public IActionResult GetAllNews([FromQuery] int pageSize, [FromQuery] int pageNumber)
         {
-            return Ok(_technicalRadiationService.GetAllNews(pageSize));
+            return Ok(_technicalRadiationService.GetAllNews(pageSize, pageNumber));
         }
 
         // GET api/5

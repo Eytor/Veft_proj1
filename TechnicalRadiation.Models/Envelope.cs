@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace WebApplication5.POS.Models
+namespace TechnicalRadiation.Models
 {
     public class Envelope<T> where T : class
     {
