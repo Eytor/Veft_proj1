@@ -12,7 +12,8 @@ namespace TechnicalRadiation.Controllers
     public class ValuesController : ControllerBase
     {
         private TechnicalRadiationService _technicalRadiationService = new TechnicalRadiationService();
-        // GET api/
+
+        // GET api
         [Route("")]
         [HttpGet]
         public IActionResult GetAllNews([FromQuery] int pageSize, [FromQuery] int pageNumber)
@@ -44,6 +45,7 @@ namespace TechnicalRadiation.Controllers
             return Ok(_technicalRadiationService.GetCategoryById(id));
         }
 
+        // GET api/authors
         [Route("authors")]
         [HttpGet]
         public ActionResult<string> GetAllAuthors()
@@ -51,22 +53,93 @@ namespace TechnicalRadiation.Controllers
             return Ok(_technicalRadiationService.GetAllAuthors());
         }
 
-        // POST api/values
+        // GET api/authors/1
+        [Route("authors/{id:int}")]
+        [HttpGet]
+        public ActionResult<string> GetAuthorById(int id)
+        {
+            return Ok();
+        }
+
+        // GET api/authors/1/newsItems
+        [Route("authors/{id:int}/newsItems")]
+        [HttpGet]
+        public ActionResult<string> GetAuthorsNewsItems(int id)
+        {
+            return Ok();
+        }
+
+        // POST api/
+        [Route("")]
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult CreateNewNewsItem([FromBody] string value)
         {
+            return Ok();
         }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        // PUT api/5
+        [HttpPut("{id:int}")]
+        public IActionResult UpdateNewsItem(int id, [FromBody] string value)
         {
+            return NoContent();
         }
 
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        // DELETE api/5
+        [HttpDelete("{id:int}")]
+        public IActionResult DeleteNewsItem(int id)
         {
+            return Ok();
+        }
+
+        // POST api/categories
+        [Route("categories")]
+        [HttpPost]
+        public IActionResult CreateNewCategory([FromBody] string value)
+        {
+            return Ok();
+        }
+
+        // PUT api/categories/5
+        [HttpPut("categories/{id:int}")]
+        public IActionResult UpdateCategory(int id, [FromBody] string value)
+        {
+            return NoContent();
+        }
+
+        // DELETE api/categories/5
+        [HttpDelete("categories/{id:int}")]
+        public IActionResult DeleteCategory(int id)
+        {
+            return Ok();
+        }
+
+        // POST api/authors
+        [Route("authors")]
+        [HttpPost]
+        public IActionResult CreateNewAuthor([FromBody] string value)
+        {
+            return Ok();
+        }
+
+        // PUT api/authors/5
+        [HttpPut("authors/{id:int}")]
+        public IActionResult UpdateAuthor(int id, [FromBody] string value)
+        {
+            return NoContent();
+        }
+
+        // DELETE api/authors/5
+        [HttpDelete("authors/{id:int}")]
+        public IActionResult DeleteAuthor(int id)
+        {
+            return Ok();
+        }
+
+        // PUT api/authors/5/newsItems/10
+        [HttpPut("authors/{authorId:int}/newsItems/{newsItemId:int}")]
+        public IActionResult LinkAuthorToNews(int authorId, int newsItemId)
+        {
+            return NoContent();
         }
     }
 }
