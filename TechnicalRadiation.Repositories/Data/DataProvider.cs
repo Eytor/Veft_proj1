@@ -463,6 +463,46 @@ namespace TechnicalRadiation.Repositories.Data
         ModifiedBy = _admin,
         CreatedDate = DateTime.Now,
         ModifiedDate = DateTime.Now
+      },
+      new Author
+      {
+        Id = 1,
+        Name = "Author 1",
+        ProfileImgSource = "www.a.com",
+        Bio = "some long biography",
+        ModifiedBy = _admin,
+        CreatedDate = DateTime.Now,
+        ModifiedDate = DateTime.Now
+      },
+      new Author
+      {
+        Id = 2,
+        Name = "Author 2",
+        ProfileImgSource = "www.a.com",
+        Bio = "some long biography",
+        ModifiedBy = _admin,
+        CreatedDate = DateTime.Now,
+        ModifiedDate = DateTime.Now
+      },
+      new Author
+      {
+        Id = 3,
+        Name = "Author 3",
+        ProfileImgSource = "www.a.com",
+        Bio = "some long biography",
+        ModifiedBy = _admin,
+        CreatedDate = DateTime.Now,
+        ModifiedDate = DateTime.Now
+      },
+      new Author
+      {
+        Id = 4,
+        Name = "Author 4",
+        ProfileImgSource = "www.a.com",
+        Bio = "some long biography",
+        ModifiedBy = _admin,
+        CreatedDate = DateTime.Now,
+        ModifiedDate = DateTime.Now
       }
     };
 
@@ -472,12 +512,143 @@ namespace TechnicalRadiation.Repositories.Data
       {
         AuthorId = 0,
         NewsItemId = 1
-      }
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 0,
+        NewsItemId = 0
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 0,
+        NewsItemId = 2
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 0,
+        NewsItemId = 3
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 0,
+        NewsItemId = 4
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 0,
+        NewsItemId = 5
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 1,
+        NewsItemId = 1
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 1,
+        NewsItemId = 6
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 1,
+        NewsItemId = 7
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 1,
+        NewsItemId = 8
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 1,
+        NewsItemId = 9
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 1,
+        NewsItemId = 10
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 2,
+        NewsItemId = 11
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 2,
+        NewsItemId = 12
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 3,
+        NewsItemId = 13
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 3,
+        NewsItemId = 14
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 3,
+        NewsItemId = 15
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 3,
+        NewsItemId = 16
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 3,
+        NewsItemId = 17
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 3,
+        NewsItemId = 18
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 4,
+        NewsItemId = 19
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 4,
+        NewsItemId = 20
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 4,
+        NewsItemId = 21
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 4,
+        NewsItemId = 22
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 4,
+        NewsItemId = 23
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 4,
+        NewsItemId = 24
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 4,
+        NewsItemId = 25
+      },
+      new NewsItemAuthors
+      {
+        AuthorId = 4,
+        NewsItemId = 26
+      },
     };
 
-
-
   }
-
-
 }
