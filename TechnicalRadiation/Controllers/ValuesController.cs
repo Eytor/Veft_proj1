@@ -44,6 +44,13 @@ namespace TechnicalRadiation.Controllers
             return Ok(_technicalRadiationService.GetCategoryById(id));
         }
 
+        [Route("authors")]
+        [HttpGet]
+        public ActionResult<string> GetAllAuthors()
+        {
+            return Ok(_technicalRadiationService.GetAllAuthors());
+        }
+
         // POST api/values
         [HttpPost]
         public void Post([FromBody] string value)

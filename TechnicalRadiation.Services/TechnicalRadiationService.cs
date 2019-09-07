@@ -29,5 +29,10 @@ namespace TechnicalRadiation.Services
         {
             return _technicalRadiationRepo.GetCategoryById(id);
         }
+
+        public IEnumerable<AuthorDto> GetAllAuthors()
+        {
+            return _technicalRadiationRepo.GetAllAuthors();
+        }
     }
 }

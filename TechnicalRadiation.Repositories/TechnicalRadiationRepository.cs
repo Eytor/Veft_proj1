@@ -124,5 +124,34 @@ namespace TechnicalRadiation.Repositories
 
             return dto;
         }
+
+        public IEnumerable<AuthorDto> GetAllAuthors()
+        {
+            return DataProvider.Authors.Select(r =>
+            {
+                var dto = new AuthorDto{
+                    Id = r.Id,
+                    Name = r.Name
+                };
+
+                Link generalLink = new Link{ href = $"api/authors/{r.Id}" };
+                Link newsItemsLink = new Link{ href = $"api/authors/{r.Id}/newsItems" };
+                // Generate Links for all authors on this object
+                var newsItemIds = DataProvider.NewsItemAuthors.Where(s => s.AuthorId == r.Id).Select(s => s.NewsItemId);
+                List<Link> NewsItemDetailedLinks = new List<Link>();
+                foreach (var newsItemId in newsItemIds)
+                {
+                    NewsItemDetailedLinks.Add(new Link{ href = $"api/{newsItemId}"});
+                }
+
+                dto.Links.AddReference("self", generalLink);
+                dto.Links.AddReference("edit", generalLink);
+                dto.Links.AddReference("delete", generalLink);
+                dto.Links.AddReference("newsItems", newsItemsLink);
+                dto.Links.AddListReference("newsItemDetailed", NewsItemDetailedLinks);
+
+                return dto;
+            });
+        }
     }
 }
