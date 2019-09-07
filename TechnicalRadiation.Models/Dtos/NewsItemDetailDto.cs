@@ -2,7 +2,7 @@ using System;
 
 namespace TechnicalRadiation.Models.Dtos
 {
-    public class NewsItemDetailDto
+    public class NewsItemDetailDto : HyperMediaModel
     {
         public int Id { get; set; }
         public string Title { get; set; }

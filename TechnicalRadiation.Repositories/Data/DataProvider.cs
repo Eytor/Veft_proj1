@@ -451,6 +451,32 @@ namespace TechnicalRadiation.Repositories.Data
         CategoryId = 2
       }
     };
+
+    public static List<Author> Authors = new List<Author>
+    {
+      new Author
+      {
+        Id = 0,
+        Name = "Author 0",
+        ProfileImgSource = "www.a.com",
+        Bio = "some long biography",
+        ModifiedBy = _admin,
+        CreatedDate = DateTime.Now,
+        ModifiedDate = DateTime.Now
+      }
+    };
+
+    public static List<NewsItemAuthors> NewsItemAuthors = new List<NewsItemAuthors>
+    {
+      new NewsItemAuthors
+      {
+        AuthorId = 0,
+        NewsItemId = 1
+      }
+    };
+
+
+
   }
 
 
