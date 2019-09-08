@@ -7,3 +7,12 @@ C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation.Models\
 C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation.Models\obj\Debug\netstandard2.0\TechnicalRadiation.Models.AssemblyInfo.cs
 C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation.Models\obj\Debug\netstandard2.0\TechnicalRadiation.Models.dll
 C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation.Models\obj\Debug\netstandard2.0\TechnicalRadiation.Models.pdb
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Models\obj\Debug\netstandard2.0\TechnicalRadiation.Models.dll
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Models\obj\Debug\netstandard2.0\TechnicalRadiation.Models.pdb
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Models\bin\Debug\netstandard2.0\TechnicalRadiation.Models.deps.json
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Models\bin\Debug\netstandard2.0\TechnicalRadiation.Models.dll
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Models\bin\Debug\netstandard2.0\TechnicalRadiation.Models.pdb
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Models\obj\Debug\netstandard2.0\TechnicalRadiation.Models.csprojAssemblyReference.cache
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Models\obj\Debug\netstandard2.0\TechnicalRadiation.Models.csproj.CoreCompileInputs.cache
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Models\obj\Debug\netstandard2.0\TechnicalRadiation.Models.AssemblyInfoInputs.cache
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Models\obj\Debug\netstandard2.0\TechnicalRadiation.Models.AssemblyInfo.cs

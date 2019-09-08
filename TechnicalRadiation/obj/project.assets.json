@@ -2724,7 +2724,7 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/12.0.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -4442,6 +4442,10 @@
       "TechnicalRadiation.Models/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2",
+          "System.ComponentModel.Annotations": "4.5.0"
+        },
         "compile": {
           "bin/placeholder/TechnicalRadiation.Models.dll": {}
         },
@@ -4453,6 +4457,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Newtonsoft.Json": "12.0.2",
           "TechnicalRadiation.Models": "1.0.0"
         },
         "compile": {
@@ -7372,10 +7377,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/11.0.2": {
-      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+    "Newtonsoft.Json/12.0.2": {
+      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
       "type": "package",
-      "path": "newtonsoft.json/11.0.2",
+      "path": "newtonsoft.json/12.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7398,7 +7403,7 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.11.0.2.nupkg.sha512",
+        "newtonsoft.json.12.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec"
       ]
     },
@@ -12127,38 +12132,40 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Eythor\\.nuget\\packages\\": {},
+    "C:\\Users\\IMJ\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation\\TechnicalRadiation.csproj",
+      "projectUniqueName": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation\\TechnicalRadiation.csproj",
       "projectName": "TechnicalRadiation",
-      "projectPath": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation\\TechnicalRadiation.csproj",
-      "packagesPath": "C:\\Users\\Eythor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation\\obj\\",
+      "projectPath": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation\\TechnicalRadiation.csproj",
+      "packagesPath": "C:\\Users\\IMJ\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Eythor\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\IMJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj": {
-              "projectPath": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj"
+            "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj": {
+              "projectPath": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj"
             },
-            "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Services\\TechnicalRadiation.Services.csproj": {
-              "projectPath": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Services\\TechnicalRadiation.Services.csproj"
+            "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Services\\TechnicalRadiation.Services.csproj": {
+              "projectPath": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Services\\TechnicalRadiation.Services.csproj"
             }
           }
         }

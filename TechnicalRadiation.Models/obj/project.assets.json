@@ -313,33 +313,35 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
-      "Newtonsoft.Json",
+      "Newtonsoft.Json >= 12.0.2",
       "System.ComponentModel.Annotations >= 4.5.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Eythor\\.nuget\\packages\\": {},
+    "C:\\Users\\IMJ\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj",
+      "projectUniqueName": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj",
       "projectName": "TechnicalRadiation.Models",
-      "projectPath": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj",
-      "packagesPath": "C:\\Users\\Eythor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Models\\obj\\",
+      "projectPath": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj",
+      "packagesPath": "C:\\Users\\IMJ\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Eythor\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\IMJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -364,7 +366,7 @@
           },
           "Newtonsoft.Json": {
             "target": "Package",
-            "version": "(, )"
+            "version": "[12.0.2, )"
           },
           "System.ComponentModel.Annotations": {
             "target": "Package",

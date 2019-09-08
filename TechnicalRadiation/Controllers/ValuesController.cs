@@ -61,6 +61,19 @@ namespace TechnicalRadiation.Controllers
             return Ok();
         }
 
+        [HttpGet]
+        [Route("/authors/{authorID}")]
+        public ActionResult<string> Get(int authorID, [FromHeader]string xApiKey)
+        {
+            if (Authentication.Authenticate(xApiKey) == false)
+            {
+                return "Not authenticated, stay out!";
+            }
+
+            return Ok(_technicalRadiationService.GetAllAuthors(authorID))
+            // return $"{authorID} Authenticated";
+        }
+
         // GET api/authors/1/newsItems
         [Route("authors/{id:int}/newsItems")]
         [HttpGet]
