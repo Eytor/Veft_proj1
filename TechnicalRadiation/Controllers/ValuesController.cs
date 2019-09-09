@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TechnicalRadiation.Services;
+using TechnicalRadiation.Models;
+using Microsoft.Extensions.Configuration;
 
 namespace TechnicalRadiation.Controllers
 {
@@ -12,13 +14,14 @@ namespace TechnicalRadiation.Controllers
     public class ValuesController : ControllerBase
     {
         public IConfiguration Config { get; }
-        public IAuthentication Auth { get; }
 
+        public IAuthentication Authentication { get; }
+    
         private TechnicalRadiationService _technicalRadiationService = new TechnicalRadiationService();
 
-        public ValuesController(IConfiguration config, IAuthentication Auth)
+        public ValuesController(IConfiguration config, IAuthentication Authentication)
         {
-            Auth = Auth;
+            Authentication = Authentication;
             Config = config;
         }
 
