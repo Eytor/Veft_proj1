@@ -11,7 +11,16 @@ namespace TechnicalRadiation.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        public IConfiguration Config { get; }
+        public IAuthentication Auth { get; }
+
         private TechnicalRadiationService _technicalRadiationService = new TechnicalRadiationService();
+
+        public ValuesController(IConfiguration config, IAuthentication Auth)
+        {
+            Auth = Auth;
+            Config = config;
+        }
 
         // GET api
         [Route("")]
@@ -63,14 +72,27 @@ namespace TechnicalRadiation.Controllers
 
         [HttpGet]
         [Route("/authors/{authorID}")]
-        public ActionResult<string> Get(int authorID, [FromHeader]string xApiKey)
+        public ActionResult<string> Get([FromHeader]int authorID, [FromHeader]string xApiKey)
         {
             if (Authentication.Authenticate(xApiKey) == false)
             {
-                return "Not authenticated, stay out!";
+                return "Please provide authentication.";
             }
 
-            return Ok(_technicalRadiationService.GetAllAuthors(authorID))
+            return Ok(_technicalRadiationService.GetAllAuthors(authorID));
+            // return $"{authorID} Authenticated";
+        }
+
+        [HttpGet]
+        [Route("/authors/{authorID}/newsItem")]
+        public ActionResult<string> Get([FromHeader]int authorID, int id, [FromHeader]string xApiKey)
+        {
+            if (Authentication.Authenticate(xApiKey) == false)
+            {
+                return "Please provide authentication.";
+            }
+
+            return Ok(_technicalRadiationService.GetAllNewsItems(authorID, id));
             // return $"{authorID} Authenticated";
         }
 
