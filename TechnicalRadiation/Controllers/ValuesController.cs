@@ -106,7 +106,7 @@ namespace TechnicalRadiation.Controllers
         {
             if (Authentication.Authenticate(xApiKey) == false)
             {
-                return "Please provide authentication.";
+                return Unauthorized();
             }
             // Take news and save in db if you have one
             // var news = new NewsItem();
