@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -71,7 +71,7 @@ namespace TechnicalRadiation.Controllers
         [HttpGet]
         public ActionResult<string> GetAuthorById(int id)
         {
-            return Ok();
+            return Ok(_technicalRadiationService.GetAuthorById(id));
         }
 
         // GET api/authors/1/newsItems

@@ -34,5 +34,15 @@ namespace TechnicalRadiation.Services
         {
             return _technicalRadiationRepo.GetAllAuthors();
         }
+
+        public AuthorDetailDto GetAuthorById(int id)
+        {
+            return _technicalRadiationRepo.GetAuthorById(id);
+        }
+
+        public IEnumerable<NewsItemDto> GetNewsByAuthorId(int id)
+        {
+            return _technicalRadiationRepo.GetNewsByAuthorId(id);
+        }
     }
 }
