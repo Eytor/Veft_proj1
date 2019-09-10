@@ -20,9 +20,9 @@ namespace TechnicalRadiation.Controllers
     
         private TechnicalRadiationService _technicalRadiationService = new TechnicalRadiationService();
 
-        public ValuesController(IConfiguration config, IAuthentication Authentication)
+        public ValuesController(IConfiguration config, IAuthentication authentication)
         {
-            Authentication = Authentication;
+            Authentication = authentication;
             Config = config;
         }
 
@@ -81,14 +81,15 @@ namespace TechnicalRadiation.Controllers
         {
             return Ok();
         }
-        
+        /*
         [HttpGet]
         [Route("/authors/{authorID}")]
         public ActionResult<string> Get([FromHeader]int id)
         {
             return Ok(_technicalRadiationService.GetAllAuthors(id));
         }
-
+        */
+        /*
         [HttpGet]
         [Route("/authors/{authorID}/newsItem")]
         public ActionResult<string> Get([FromHeader]int authorID, int id)
@@ -96,12 +97,12 @@ namespace TechnicalRadiation.Controllers
 
             return Ok(_technicalRadiationService.GetAllNewsItems(authorID, id));
             // return $"{authorID} Authenticated";
-        }
+        } */
 
         // The dotnet should have already new-ed a news file which I received from body.
         [HttpGet]
         [Route("/authors/{authorID}")]
-        public ActionResult<string> Post([FromHeader] string xApiKey, [FromBody] TechnicalRadiation.Models.NewsItem news)
+        public ActionResult<string> Post([FromHeader] string xApiKey/*, [FromBody] TechnicalRadiation.Models.NewsItem news*/)
         {
             if (Authentication.Authenticate(xApiKey) == false)
             {
@@ -111,15 +112,17 @@ namespace TechnicalRadiation.Controllers
             // var news = new NewsItem();
             // Fill inn parameters
             // news.name = "";
-            TechnicalRadiation.Models.NewsItem.save(news);
+            // TechnicalRadiation.Models.NewsItem.save(news);
             // DBNull.save(news);
-            return Created();
+            // return Created();
             // return $"{authorID} Authenticated";
+            return Ok();
         }
-
+        /*
+        
         [HttpGet]
         [Route("/authors/{authorID}/newsItem")]
-        public ActionResult<string> Post([FromHeader]int id, [FromHeader]string xApiKey, [FromBody] TechnicalRadiation.Models.NewsItem news)
+        public ActionResult<string> Post([FromHeader]int id, [FromHeader]string xApiKey/*, [FromBody] TechnicalRadiation.Models.NewsItem news)
         {
             if (Authentication.Authenticate(xApiKey) == false)
             {
@@ -128,9 +131,9 @@ namespace TechnicalRadiation.Controllers
 
             return Created();
             // return $"{authorID} Authenticated";
-        }
+        } 
 
-
+        */
 
         // POST api/
         [Route("")]
@@ -146,7 +149,7 @@ namespace TechnicalRadiation.Controllers
         {
             return NoContent();
         }
-
+        /*
         [Route("/{newsitemId}")] 
         [HttpDelete]
         public ActionResult Delete([FromHeader]int id, [FromHeader]string xApiKey)
@@ -175,7 +178,7 @@ namespace TechnicalRadiation.Controllers
         public IActionResult CreateNewCategory([FromBody] string value)
         {
             return Ok();
-        }
+        } */
 
         // PUT api/categories/5
         [HttpPut("categories/{id:int}")]
