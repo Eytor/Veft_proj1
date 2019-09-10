@@ -160,9 +160,9 @@ namespace TechnicalRadiation.Controllers
 
         [Route("/categories/{categoryId}")] 
         [HttpDelete]
-        public ActionResult Delete([FromHeader]int id, [FromHeader]string xApiKey)
+        public ActionResult Delete([FromHeader]int cId, [FromHeader]string xApiKey)
         {
-            var delId = _technicalRadiationService.GetNewsById(id);
+            var delId = _technicalRadiationService.GetNewsById(cId);
             if(_technicalRadiationService.GetNewsById(id)){
                 technicalRadiationService.Delete(id);
             }

@@ -17,7 +17,6 @@ namespace TechnicalRadiation.Services
         public Authentication(IConfiguration config)
         {
           this.Config = config;
-
         }
 
         public bool Authenticate(string secret)

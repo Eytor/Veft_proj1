@@ -1835,7 +1835,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Binder/2.2.0": {
+      "Microsoft.Extensions.Configuration.Binder/2.2.4": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "2.2.0"
@@ -4471,6 +4471,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.2.0",
+          "Microsoft.Extensions.Configuration.Binder": "2.2.4",
           "TechnicalRadiation.Models": "1.0.0",
           "TechnicalRadiation.Repositories": "1.0.0"
         },
@@ -6109,16 +6111,16 @@
         "microsoft.extensions.configuration.abstractions.nuspec"
       ]
     },
-    "Microsoft.Extensions.Configuration.Binder/2.2.0": {
-      "sha512": "vJ9xvOZCnUAIHcGC3SU35r3HKmHTVIeHzo6u/qzlHAqD8m6xv92MLin4oJntTvkpKxVX3vI1GFFkIQtU3AdlsQ==",
+    "Microsoft.Extensions.Configuration.Binder/2.2.4": {
+      "sha512": "TNTCeQwiVsBc9p4C+xPG+CmdaLVAwp+o9pHqYxtlTcXIA8ma7hCqTrXIjn7tPUEGufNEQ48sH1mfjO08jLjMdQ==",
       "type": "package",
-      "path": "microsoft.extensions.configuration.binder/2.2.0",
+      "path": "microsoft.extensions.configuration.binder/2.2.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.xml",
-        "microsoft.extensions.configuration.binder.2.2.0.nupkg.sha512",
+        "microsoft.extensions.configuration.binder.2.2.4.nupkg.sha512",
         "microsoft.extensions.configuration.binder.nuspec"
       ]
     },
@@ -12126,45 +12128,47 @@
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
-      "Microsoft.Extensions.Configuration",
       "Microsoft.NETCore.App >= 2.2.0",
       "TechnicalRadiation.Models >= 1.0.0",
       "TechnicalRadiation.Services >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Eythor\\.nuget\\packages\\": {},
+    "C:\\Users\\IMJ\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation\\TechnicalRadiation.csproj",
+      "projectUniqueName": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation\\TechnicalRadiation.csproj",
       "projectName": "TechnicalRadiation",
-      "projectPath": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation\\TechnicalRadiation.csproj",
-      "packagesPath": "C:\\Users\\Eythor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation\\obj\\",
+      "projectPath": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation\\TechnicalRadiation.csproj",
+      "packagesPath": "C:\\Users\\IMJ\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Eythor\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\IMJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.nuget.org/packages/Microsoft.AspNetCore.Razor.Design/": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj": {
-              "projectPath": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj"
+            "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj": {
+              "projectPath": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj"
             },
-            "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Services\\TechnicalRadiation.Services.csproj": {
-              "projectPath": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Services\\TechnicalRadiation.Services.csproj"
+            "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Services\\TechnicalRadiation.Services.csproj": {
+              "projectPath": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Services\\TechnicalRadiation.Services.csproj"
             }
           }
         }
@@ -12188,10 +12192,6 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[2.2.0, )"
-          },
-          "Microsoft.Extensions.Configuration": {
-            "target": "Package",
-            "version": "(, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
