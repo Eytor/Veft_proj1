@@ -160,7 +160,7 @@ namespace TechnicalRadiation.Repositories
             if (author == null)
             {
                 return null;
-                }
+            }
             AuthorDetailDto dto = new AuthorDetailDto {
                 Id = author.Id,
                 Name = author.Name,
@@ -224,6 +224,44 @@ namespace TechnicalRadiation.Repositories
             });
         }
 
+        public IEnumerable<NewsItemDto> CreateNews(NewsItem news)
+        {
+            var nextId = DataProvider.NewsItems.OrderByDescending(r => r.Id).FirstOrDefault().Id + 1; // Get next ID, quick fix according to Arnar.
+            var entity = new NewsItem{
+            Id = nextId,
+            Title = news.Title,
+            ImgSource = news.ImgSource,
+            ShortDescription = news.ShortDescription,
+            LongDescription = news.LongDescription,
+            PublishDate = DateTime.Now,
+            ModifiedBy = "Admin",
+            CreatedDate = DateTime.Now,
+            ModifiedDate = DateTime.Now,
+            };
+            DataProvider.NewsItems.Add(entity);
+            return new NewsItemDto{
+            Id = nextId,
+            Title = entity.Title,
+            ImgSource = entity.ImgSource,
+            ShortDescription = entity.ShortDescription,
+            LongDescription = entity.LongDescription,
 
+            };
+        }
+
+        public IEnumerable<NewsItemDto> CreateNewsItemId(int id)
+        {
+            return _technicalRadiationRepo.CreateNewsItemId(id);
+        }
+
+        public IEnumerable<NewsItemDto> DeleteNewsItemId(int id)
+        {
+            return TechnicalRadiationRepository.DeleteNewsItemId(id);
+        }
+
+        public IEnumerable<NewsItemDto> CreateCategories()
+        {
+            return _technicalRadiationRepo.CreateCategories();
+        }
     }
 }
