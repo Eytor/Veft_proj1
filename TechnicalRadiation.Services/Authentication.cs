@@ -11,18 +11,15 @@ using TechnicalRadiation.Repositories.Data;
 namespace TechnicalRadiation.Services
 {
     public class Authentication : IAuthentication
+
     {
-    public Authentication(IConfiguration config)
+        public IConfiguration Config { get;  }
+        public Authentication(IConfiguration config)
         {
           this.Config = config;
 
         }
-                public IConfiguration Config { get;  }
 
-        public Authentication(IConfiguration config)
-        {
-            Config = config;
-        }
         public bool Authenticate(string secret)
         {
             var secretKey = Config.GetValue<string>("secretKey");

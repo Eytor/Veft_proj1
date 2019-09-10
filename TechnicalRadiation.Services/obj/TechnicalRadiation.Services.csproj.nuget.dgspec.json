@@ -164,6 +164,10 @@
           "dependencies": {
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
               "version": "(, )"
             },
             "NETStandard.Library": {
