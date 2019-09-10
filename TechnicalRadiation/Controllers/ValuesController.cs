@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using TechnicalRadiation.Services;
 using TechnicalRadiation.Models;
 using Microsoft.Extensions.Configuration;
+using TechnicalRadiation.Repositories;
 
 namespace TechnicalRadiation.Controllers
 {
@@ -73,32 +74,6 @@ namespace TechnicalRadiation.Controllers
             return Ok();
         }
 
-        [HttpGet]
-        [Route("/authors/{authorID}")]
-        public ActionResult<string> Get([FromHeader]int authorID, [FromHeader]string xApiKey)
-        {
-            if (Authentication.Authenticate(xApiKey) == false)
-            {
-                return "Please provide authentication.";
-            }
-
-            return Ok(_technicalRadiationService.GetAllAuthors(authorID));
-            // return $"{authorID} Authenticated";
-        }
-
-        [HttpGet]
-        [Route("/authors/{authorID}/newsItem")]
-        public ActionResult<string> Get([FromHeader]int authorID, int id, [FromHeader]string xApiKey)
-        {
-            if (Authentication.Authenticate(xApiKey) == false)
-            {
-                return "Please provide authentication.";
-            }
-
-            return Ok(_technicalRadiationService.GetAllNewsItems(authorID, id));
-            // return $"{authorID} Authenticated";
-        }
-
         // GET api/authors/1/newsItems
         [Route("authors/{id:int}/newsItems")]
         [HttpGet]
@@ -106,6 +81,56 @@ namespace TechnicalRadiation.Controllers
         {
             return Ok();
         }
+        
+        [HttpGet]
+        [Route("/authors/{authorID}")]
+        public ActionResult<string> Get([FromHeader]int id)
+        {
+            return Ok(_technicalRadiationService.GetAllAuthors(id));
+        }
+
+        [HttpGet]
+        [Route("/authors/{authorID}/newsItem")]
+        public ActionResult<string> Get([FromHeader]int authorID, int id)
+        {
+
+            return Ok(_technicalRadiationService.GetAllNewsItems(authorID, id));
+            // return $"{authorID} Authenticated";
+        }
+
+        // The dotnet should have already new-ed a news file which I received from body.
+        [HttpGet]
+        [Route("/authors/{authorID}")]
+        public ActionResult<string> Post([FromHeader] string xApiKey, [FromBody] TechnicalRadiation.Models.NewsItem news)
+        {
+            if (Authentication.Authenticate(xApiKey) == false)
+            {
+                return "Please provide authentication.";
+            }
+            // Take news and save in db if you have one
+            // var news = new NewsItem();
+            // Fill inn parameters
+            // news.name = "";
+            TechnicalRadiation.Models.NewsItem.save(news);
+            // DBNull.save(news);
+            return Created();
+            // return $"{authorID} Authenticated";
+        }
+
+        [HttpGet]
+        [Route("/authors/{authorID}/newsItem")]
+        public ActionResult<string> Post([FromHeader]int id, [FromHeader]string xApiKey, [FromBody] TechnicalRadiation.Models.NewsItem news)
+        {
+            if (Authentication.Authenticate(xApiKey) == false)
+            {
+                return "Please provide authentication.";
+            }
+
+            return Created();
+            // return $"{authorID} Authenticated";
+        }
+
+
 
         // POST api/
         [Route("")]
@@ -122,12 +147,27 @@ namespace TechnicalRadiation.Controllers
             return NoContent();
         }
 
-        // DELETE api/5
-        [HttpDelete("{id:int}")]
-        public IActionResult DeleteNewsItem(int id)
+        [Route("/{newsitemId}")] 
+        [HttpDelete]
+        public ActionResult Delete([FromHeader]int id, [FromHeader]string xApiKey)
         {
-            return Ok();
+            var delId = _technicalRadiationService.GetNewsById(id);
+            if(_technicalRadiationService.GetNewsById(id)){
+                technicalRadiationService.Delete(id);
+            }
         }
+
+
+        [Route("/categories/{categoryId}")] 
+        [HttpDelete]
+        public ActionResult Delete([FromHeader]int id, [FromHeader]string xApiKey)
+        {
+            var delId = _technicalRadiationService.GetNewsById(id);
+            if(_technicalRadiationService.GetNewsById(id)){
+                technicalRadiationService.Delete(id);
+            }
+        }
+
 
         // POST api/categories
         [Route("categories")]
