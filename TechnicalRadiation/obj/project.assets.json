@@ -12126,47 +12126,45 @@
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
+      "Microsoft.Extensions.Configuration",
       "Microsoft.NETCore.App >= 2.2.0",
       "TechnicalRadiation.Models >= 1.0.0",
       "TechnicalRadiation.Services >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\IMJ\\.nuget\\packages\\": {},
+    "C:\\Users\\Eythor\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation\\TechnicalRadiation.csproj",
+      "projectUniqueName": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation\\TechnicalRadiation.csproj",
       "projectName": "TechnicalRadiation",
-      "projectPath": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation\\TechnicalRadiation.csproj",
-      "packagesPath": "C:\\Users\\IMJ\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation\\obj\\",
+      "projectPath": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation\\TechnicalRadiation.csproj",
+      "packagesPath": "C:\\Users\\Eythor\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\IMJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Eythor\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://www.nuget.org/packages/Microsoft.AspNetCore.Razor.Design/": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj": {
-              "projectPath": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj"
+            "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj": {
+              "projectPath": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj"
             },
-            "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Services\\TechnicalRadiation.Services.csproj": {
-              "projectPath": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Services\\TechnicalRadiation.Services.csproj"
+            "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Services\\TechnicalRadiation.Services.csproj": {
+              "projectPath": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Services\\TechnicalRadiation.Services.csproj"
             }
           }
         }
@@ -12190,6 +12188,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[2.2.0, )"
+          },
+          "Microsoft.Extensions.Configuration": {
+            "target": "Package",
+            "version": "(, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
