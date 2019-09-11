@@ -155,7 +155,7 @@ namespace TechnicalRadiation.Controllers
 
         // PUT api/5
         [Route("/{id:int}/newsItems")]
-        public IActionResult UpdateNewsItemById(int id, [FromBody] NewsItemInputModel news )
+        public IActionResult UpdateNewsItemById(int id, [FromBody]NewsItemInputModel news )
         {
             if(!ModelState.IsValid){
             return BadRequest("Model is not properly formatted");
@@ -165,7 +165,7 @@ namespace TechnicalRadiation.Controllers
         }
 
         [Route("/{id:int}/newsItems")]
-        public IActionResult UpdateNewsItemPartiallyById(int id, [FromBody] NewsItemInputModel news )
+        public IActionResult UpdateNewsItemPartiallyById(int id, [FromBody]NewsItemInputModel news )
         {
 
             _technicalRadiationRepo.UpdateNewsItemPartiallyById(news, id);     

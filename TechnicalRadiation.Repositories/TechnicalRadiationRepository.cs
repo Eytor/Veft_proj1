@@ -364,11 +364,10 @@ namespace TechnicalRadiation.Repositories
 
             //Method 2
         var entity = DataProvider.NewsItems.FirstOrDefault(r=>r.Id == id);
-        if(entity == null){ return "Failiure"}
+        if(entity == null){ return "Failiure";}
         DataProvider.NewsItems.Remove(entity);
 
         }
     }
-            
-  }
+           
 }
