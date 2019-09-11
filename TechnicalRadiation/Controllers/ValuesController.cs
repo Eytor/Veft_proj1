@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,7 +17,7 @@ namespace TechnicalRadiation.Controllers
         public IConfiguration Config { get; }
 
         public IAuthentication Authentication { get; }
-    
+
         private TechnicalRadiationService _technicalRadiationService = new TechnicalRadiationService();
 
         public ValuesController(IConfiguration config, IAuthentication authentication)
@@ -102,12 +102,16 @@ namespace TechnicalRadiation.Controllers
         // The dotnet should have already new-ed a news file which I received from body.
         [HttpGet]
         [Route("/authors/{authorID}")]
-        public ActionResult<string> Post([FromHeader] string xApiKey/*, [FromBody] TechnicalRadiation.Models.NewsItem news*/)
+        public ActionResult<string> CreateNews([FromHeader] string Authorization, [FromBody] NewsStyleUriParser body)
         {
-            if (Authentication.Authenticate(xApiKey) == false)
+            if (Authentication.Authenticate(Authorization) == false)
             {
                 return Unauthorized();
             }
+            if(!ModelState.IsValid){
+                return BadRequest("Model is not properly set");
+            }
+
             // Take news and save in db if you have one
             // var news = new NewsItem();
             // Fill inn parameters
@@ -116,7 +120,12 @@ namespace TechnicalRadiation.Controllers
             // DBNull.save(news);
             // return Created();
             // return $"{authorID} Authenticated";
-            return Ok();
+            var entity = _technicalRadiationService.CreateNews(body);
+                
+            return TechnicalRadiationService.CreateNews("CreateNews", new { id = entity.Id}, null);
+
+            
+
         }
         /*
         

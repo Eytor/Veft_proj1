@@ -44,5 +44,25 @@ namespace TechnicalRadiation.Services
         {
             return _technicalRadiationRepo.GetNewsByAuthorId(id);
         }
+
+        public IEnumerable<NewsItemDto> CreateNews(NewsItemDetailDto news)
+        {
+            return _technicalRadiationRepo.CreateNews(news);
+        }
+
+        public IEnumerable<NewsItemDto> CreateNewsItemId(int id)
+        {
+            return _technicalRadiationRepo.CreateNewsItemId(id);
+        }
+
+        public IEnumerable<NewsItemDto> DeleteNewsItemId(int id)
+        {
+            return _technicalRadiationRepo.DeleteNewsItemId(id);
+        }
+
+        public IEnumerable<NewsItemDto> CreateCategories()
+        {
+            return _technicalRadiationRepo.CreateCategories();
+        }
     }
 }

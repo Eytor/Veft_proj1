@@ -216,7 +216,40 @@ namespace TechnicalRadiation.Repositories
         List<Link> authorLinks = new List<Link>();
         foreach (var authorId in authorIds)
         {
+<<<<<<< HEAD
+            var author = DataProvider.Authors.FirstOrDefault(x => x.Id == id);
+            if (author == null)
+            {
+                return null;
+            }
+            AuthorDetailDto dto = new AuthorDetailDto {
+                Id = author.Id,
+                Name = author.Name,
+                ProfileImgSource = author.ProfileImgSource,
+                Bio = author.Bio
+            };
+
+            Link generalLink = new Link{ href = $"api/authors/{id}" };
+            Link newsItemLink = new Link{ href = $"api/authors/{id}/newsItems" };
+
+            var newsItemIds = DataProvider.NewsItemAuthors.Where(s => s.AuthorId == id).Select(s => s.NewsItemId);
+            List<Link> NewsItemDetailedLinks = new List<Link>();
+            foreach (var newsItemId in newsItemIds)
+            {
+                NewsItemDetailedLinks.Add(new Link{ href = $"api/{newsItemId}"});
+            }
+
+
+            dto.Links.AddReference("self", generalLink);
+            dto.Links.AddReference("edit", generalLink);
+            dto.Links.AddReference("delete", generalLink);
+            dto.Links.AddReference("newsItems", newsItemLink);
+            dto.Links.AddListReference("newsItemsDetailed", NewsItemDetailedLinks);
+
+            return dto;
+=======
           authorLinks.Add(new Link { href = $"api/authors/{authorId}" });
+>>>>>>> 782f6ae9e4783ec96086c8855bd9320b28d944e8
         }
         // Generate links for all categories for this news story
         var categoryIds = DataProvider.NewsItemCategories.Where(s => s.NewsItemId == r.NewsItem.Id).Select(s => s.CategoryId);
@@ -234,6 +267,47 @@ namespace TechnicalRadiation.Repositories
       });
     }
 
+<<<<<<< HEAD
+        public IEnumerable<NewsItemDto> CreateNews(NewsItem news)
+        {
+            var nextId = DataProvider.NewsItems.OrderByDescending(r => r.Id).FirstOrDefault().Id + 1; // Get next ID, quick fix according to Arnar.
+            var entity = new NewsItem{
+            Id = nextId,
+            Title = news.Title,
+            ImgSource = news.ImgSource,
+            ShortDescription = news.ShortDescription,
+            LongDescription = news.LongDescription,
+            PublishDate = DateTime.Now,
+            ModifiedBy = "Admin",
+            CreatedDate = DateTime.Now,
+            ModifiedDate = DateTime.Now,
+            };
+            DataProvider.NewsItems.Add(entity);
+            return new NewsItemDto{
+            Id = nextId,
+            Title = entity.Title,
+            ImgSource = entity.ImgSource,
+            ShortDescription = entity.ShortDescription,
+            LongDescription = entity.LongDescription,
+
+            };
+        }
+
+        public IEnumerable<NewsItemDto> CreateNewsItemId(int id)
+        {
+            return _technicalRadiationRepo.CreateNewsItemId(id);
+        }
+
+        public IEnumerable<NewsItemDto> DeleteNewsItemId(int id)
+        {
+            return TechnicalRadiationRepository.DeleteNewsItemId(id);
+        }
+
+        public IEnumerable<NewsItemDto> CreateCategories()
+        {
+            return _technicalRadiationRepo.CreateCategories();
+        }
+=======
     public NewsItemDto CreateNewNewsItem(NewsItemInputModel news)
     {
       int nextId = DataProvider.NewsItems.OrderByDescending(r => r.Id).FirstOrDefault().Id + 1;
@@ -257,6 +331,7 @@ namespace TechnicalRadiation.Repositories
         ImgSource = newNews.ImgSource,
         ShortDescription = newNews.ShortDescription
       };
+>>>>>>> 782f6ae9e4783ec96086c8855bd9320b28d944e8
     }
   }
 }
