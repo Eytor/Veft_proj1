@@ -330,7 +330,45 @@ namespace TechnicalRadiation.Repositories
         ImgSource = newNews.ImgSource,
         ShortDescription = newNews.ShortDescription
       };
->>>>>>> 782f6ae9e4783ec96086c8855bd9320b28d944e8
     }
+    public void UpdateNewsItemById(NewsItemInputModel news){
+        var entity = DataProvider.NewsItems.FirstOrDefault(r=>r.Id == id);
+        if(enity == null){ return; } //Some error would be nice.
+
+        entity.Title = news.Title;
+        entity.ShortDescription = news.ShortDescription;
+        entity.LongDescription = news.LongDescription;
+    }
+
+    public void UpdateNewsItemPartiallyById(NewsItemInputModel news){
+        var entity = DataProvider.NewsItems.FirstOrDefault(r=>r.Id == id);
+        if(enity == null){ return; } //Some error would be nice.
+        if(!string.IsNullOrEmpty(news.Title)){
+                        entity.Title = news.Title;
+
+        }
+         if(!string.IsNullOrEmpty(news.Title)){
+        entity.ShortDescription = news.ShortDescription;
+
+        }
+          if(!string.IsNullOrEmpty(news.Title)){
+        entity.LongDescription = news.LongDescription;
+
+        }
+    }
+
+        public void DeletById(NewsItemInputModel news){
+
+        //method 1
+        //DataProvider.NewsItems.RemoveAll(r=>r.Id == id);
+
+            //Method 2
+        var entity = DataProvider.NewsItems.FirstOrDefault(r=>r.Id == id);
+        if(entity == null){ return "Failiure"}
+        DataProvider.NewsItems.Remove(entity);
+
+        }
+    }
+            
   }
 }

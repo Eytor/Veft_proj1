@@ -65,5 +65,18 @@ namespace TechnicalRadiation.Services
         {
             return _technicalRadiationRepo.CreateCategories();
         }
+
+        public void UpdateNewsItemById(NewsItemInputModel news){
+            return _technicalRadiationRepo.UpdateNewsItemById(NewsItemInputModel news, int id);
+        }
+
+        public void UpdateNewsItemPartiallyById(NewsItemInputModel news){
+            return _technicalRadiationRepo.UpdateNewsItemPartiallyById(NewsItemInputModel news, int id);
+        }
+
+        public void DeletById(NewsItemInputModel news){
+            return 
+        }
+
     }
 }

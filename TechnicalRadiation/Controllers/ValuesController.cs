@@ -154,11 +154,24 @@ namespace TechnicalRadiation.Controllers
         }
 
         // PUT api/5
-        [HttpPut("{id:int}")]
-        public IActionResult UpdateNewsItem(int id, [FromBody] string value)
+        [Route("/{id:int}/newsItems")]
+        public IActionResult UpdateNewsItemById(int id, [FromBody] NewsItemInputModel news )
         {
+            if(!ModelState.IsValid){
+            return BadRequest("Model is not properly formatted");
+           }
+            _technicalRadiationRepo.UpdateNewsItemById(news, id);     
             return NoContent();
         }
+
+        [Route("/{id:int}/newsItems")]
+        public IActionResult UpdateNewsItemPartiallyById(int id, [FromBody] NewsItemInputModel news )
+        {
+
+            _technicalRadiationRepo.UpdateNewsItemPartiallyById(news, id);     
+            return NoContent();
+        }
+
         /*
         [Route("/{newsitemId}")] 
         [HttpDelete]
@@ -190,18 +203,21 @@ namespace TechnicalRadiation.Controllers
             return Ok();
         } */
 
+
+/*
         // PUT api/categories/5
-        [HttpPut("categories/{id:int}")]
+        [HttpPut("[Route("{newsitemId}")] ")]
         public IActionResult UpdateCategory(int id, [FromBody] string value)
         {
             return NoContent();
-        }
+        }*/
 
         // DELETE api/categories/5
         [HttpDelete("categories/{id:int}")]
         public IActionResult DeleteCategory(int id)
         {
-            return Ok();
+            _technicalRadiationService.DeletById(id);
+            return NoContent();
         }
 
         // POST api/authors
@@ -223,7 +239,7 @@ namespace TechnicalRadiation.Controllers
         [HttpDelete("authors/{id:int}")]
         public IActionResult DeleteAuthor(int id)
         {
-            return Ok();
+ 
         }
 
         // PUT api/authors/5/newsItems/10
