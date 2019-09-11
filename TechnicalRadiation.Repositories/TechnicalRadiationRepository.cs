@@ -264,10 +264,10 @@ namespace TechnicalRadiation.Repositories
         dto.Links.AddListReference("authors", authorLinks);
         dto.Links.AddListReference("categories", categoryLinks);
         return dto;
+
       });
     }
-
-<<<<<<< HEAD
+        
         public IEnumerable<NewsItemDto> CreateNews(NewsItem news)
         {
             var nextId = DataProvider.NewsItems.OrderByDescending(r => r.Id).FirstOrDefault().Id + 1; // Get next ID, quick fix according to Arnar.
@@ -307,7 +307,6 @@ namespace TechnicalRadiation.Repositories
         {
             return _technicalRadiationRepo.CreateCategories();
         }
-=======
     public NewsItemDto CreateNewNewsItem(NewsItemInputModel news)
     {
       int nextId = DataProvider.NewsItems.OrderByDescending(r => r.Id).FirstOrDefault().Id + 1;

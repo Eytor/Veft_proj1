@@ -121,6 +121,7 @@ namespace TechnicalRadiation.Controllers
             // return Created();
             // return $"{authorID} Authenticated";
             var entity = _technicalRadiationService.CreateNews(body);
+
                 
             return TechnicalRadiationService.CreateNews("CreateNews", new { id = entity.Id}, null);
 

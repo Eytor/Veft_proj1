@@ -47,6 +47,7 @@ namespace TechnicalRadiation.Services
 
         public IEnumerable<NewsItemDto> CreateNews(NewsItemDetailDto news)
         {
+
             return _technicalRadiationRepo.CreateNews(news);
         }
 
