@@ -11,8 +11,8 @@ namespace TechnicalRadiation.Controllers
     public class NewsItemController : ControllerBase
     {
         public IConfiguration Config { get; }
+        public IAuthorization Authorization { get; }
 
-        public IAuthentication Authentication { get; }
         private readonly INewsItemService _newsItemService;
 
         public NewsItemController(INewsItemService newsItemService, IConfiguration config, IAuthentication authentication)
@@ -40,8 +40,12 @@ namespace TechnicalRadiation.Controllers
         // POST api/
         [Route("")]
         [HttpPost]
-        public IActionResult CreateNewNewsItem([FromBody] NewsItemInputModel newsItem, [FromHeader]string xApiKey)
+        public IActionResult CreateNewNewsItem([FromBody] NewsItemInputModel newsItem, [FromHeader]string Authorization)
         {
+            if (Authentication.Authenticate(Authorization) == false)
+            {
+                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+            }
             if (!ModelState.IsValid)
             {
                 return BadRequest("Model is not properly formatted");
@@ -52,8 +56,12 @@ namespace TechnicalRadiation.Controllers
 
         [Route("{id:int}")]
         [HttpPut]
-        public IActionResult UpdateNewsItemById(int id, [FromBody]NewsItemInputModel news, [FromHeader]string xApiKey)
+        public IActionResult UpdateNewsItemById(int id, [FromBody]NewsItemInputModel news, [FromHeader]string Authorization)
         {
+            if (Authentication.Authenticate(Authorization) == false)
+            {
+                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+            }
             if (!ModelState.IsValid)
             {
                 return BadRequest("Model is not properly formatted");
@@ -64,8 +72,12 @@ namespace TechnicalRadiation.Controllers
 
         [Route("{id:int}")]
         [HttpDelete]
-        public ActionResult Delete(int id, [FromHeader]string xApiKey)
+        public ActionResult Delete(int id, [FromHeader]string Authorization)
         {
+            if (Authentication.Authenticate(Authorization) == false)
+            {
+                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+            }
             _newsItemService.DeleteNewsById(id);
             return NoContent();
         }

@@ -1,7 +1,7 @@
 ﻿namespace TechnicalRadiation.Services
 {
-    public interface IAuthentication
+    public interface IAuthorization
     {
-        bool Authenticate(string secret);
+        bool Authorization(string secret);
     }
 }

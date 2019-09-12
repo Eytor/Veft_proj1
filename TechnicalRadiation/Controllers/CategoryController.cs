@@ -11,8 +11,8 @@ namespace TechnicalRadiation.Controllers
     public class CategoryController : Controller
     {
         public IConfiguration Config { get; }
+        public IAuthorization Authorization { get; }
 
-        public IAuthentication Authentication { get; }
         private readonly ICategoryService _categoryService;
 
         public CategoryController(ICategoryService categoryService, IConfiguration config, IAuthentication authentication)
@@ -42,8 +42,12 @@ namespace TechnicalRadiation.Controllers
          // Post api/categories
         [Route("")]
         [HttpPost]
-        public IActionResult CreateNewCategory([FromBody] CategoryInputModel newCategory, [FromHeader]string xApiKey)
+        public IActionResult CreateNewCategory([FromBody] CategoryInputModel newCategory, [FromHeader]string Authorization)
         {
+            if (Authentication.Authenticate(Authorization) == false)
+            {
+                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+            }
             if (!ModelState.IsValid)
             {
                 return BadRequest("Model is not properly formatted");
@@ -57,8 +61,12 @@ namespace TechnicalRadiation.Controllers
         // PUT api/categories/1
         [Route("{id:int}")]
         [HttpPut]
-        public IActionResult UpdateAuthorById( int id, [FromBody] CategoryInputModel category, [FromHeader]string xApiKey)
+        public IActionResult UpdateAuthorById( int id, [FromBody] CategoryInputModel category, [FromHeader]string Authorization)
         {
+            if (Authentication.Authenticate(Authorization) == false)
+            {
+                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+            }
             if (!ModelState.IsValid)
             {
                 return BadRequest("Model is not properly formatted");
@@ -70,8 +78,12 @@ namespace TechnicalRadiation.Controllers
         // DELETE api/categories/1
         [Route("{id:int}")]
         [HttpDelete]
-        public ActionResult DeleteCategoryById(int id, [FromHeader]string xApiKey)
+        public ActionResult DeleteCategoryById(int id, [FromHeader]string Authorization)
         {
+            if (Authentication.Authenticate(Authorization) == false)
+            {
+                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+            }
             _categoryService.DeleteCategoryById(id);
             return NoContent();
         }

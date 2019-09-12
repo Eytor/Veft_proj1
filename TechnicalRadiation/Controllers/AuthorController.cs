@@ -11,8 +11,8 @@ namespace TechnicalRadiation.Controllers
     public class AuthorController : ControllerBase
     {
         public IConfiguration Config { get; }
+        public IAuthorization Authorization { get; }
 
-        public IAuthentication Authentication { get; }
         private readonly IAuthorService _authorService;
 
         public AuthorController(IAuthorService authorService, IConfiguration config, IAuthentication authentication)
@@ -49,8 +49,12 @@ namespace TechnicalRadiation.Controllers
          // Post api/authors
         [Route("")]
         [HttpPost]
-        public IActionResult CreateNewAuthor([FromBody] AuthorInputModel newAuthor, [FromHeader]string xApiKey)
+        public IActionResult CreateNewAuthor([FromBody] AuthorInputModel newAuthor, [FromHeader]string Authorization)
         {
+            if (Authentication.Authenticate(Authorization) == false)
+            {
+                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+            }
             if (!ModelState.IsValid)
             {
                 return BadRequest("Model is not properly formatted");
@@ -64,8 +68,12 @@ namespace TechnicalRadiation.Controllers
         // PUT api/authors/1
         [Route("{id:int}")]
         [HttpPut]
-        public IActionResult UpdateAuthorById( int id, [FromBody] AuthorInputModel author, [FromHeader]string xApiKey)
+        public IActionResult UpdateAuthorById( int id, [FromBody] AuthorInputModel author, [FromHeader]string Authorization)
         {
+            if (Authentication.Authenticate(Authorization) == false)
+            {
+                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+            }
             if (!ModelState.IsValid)
             {
                 return BadRequest("Model is not properly formatted");
@@ -77,8 +85,12 @@ namespace TechnicalRadiation.Controllers
         // DELETE api/authors/1
         [Route("{id:int}")]
         [HttpDelete]
-        public ActionResult DeleteAuthorById(int id, [FromHeader]string xApiKey)
+        public ActionResult DeleteAuthorById(int id, [FromHeader]string Authorization)
         {
+            if (Authentication.Authenticate(Authorization) == false)
+            {
+                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+            }
             _authorService.DeleteAuthorById(id);
             return NoContent();
         }
