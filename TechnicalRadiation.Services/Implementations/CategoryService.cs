@@ -15,7 +15,7 @@ namespace TechnicalRadiation.Services.Implementations
 
         public CategoryService(ICategoryRepository categoryRepository) => _categoryRepository = categoryRepository;
 
-        public IEnumerable<CategoryDto> getAllCategories()
+        public IEnumerable<CategoryDto> GetAllCategories()
         {
             var categories = _categoryRepository.getAllCategories();
             foreach (var category in categories)

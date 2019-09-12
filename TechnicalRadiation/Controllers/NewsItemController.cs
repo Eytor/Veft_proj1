@@ -64,7 +64,7 @@ namespace TechnicalRadiation.Controllers
 
         [Route("{id:int}")]
         [HttpDelete]
-        public ActionResult Delete([FromHeader]int id, [FromHeader]string xApiKey)
+        public ActionResult Delete(int id, [FromHeader]string xApiKey)
         {
             _newsItemService.DeleteNewsById(id);
             return NoContent();

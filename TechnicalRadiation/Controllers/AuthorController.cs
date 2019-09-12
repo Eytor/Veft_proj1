@@ -64,20 +64,20 @@ namespace TechnicalRadiation.Controllers
         // PUT api/authors/1
         [Route("{id:int}")]
         [HttpPut]
-        public IActionResult UpdateAuthorById( int id, [FromBody] AuthorInputModel newAuthor, [FromHeader]string xApiKey)
+        public IActionResult UpdateAuthorById( int id, [FromBody] AuthorInputModel author, [FromHeader]string xApiKey)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest("Model is not properly formatted");
             }
-            _authorService.UpdateAuthorById(newAuthor, id);
+            _authorService.UpdateAuthorById(author, id);
             return NoContent();
         }
 
         // DELETE api/authors/1
         [Route("{id:int}")]
         [HttpDelete]
-        public ActionResult DeleteAuthorById([FromHeader]int id, [FromHeader]string xApiKey)
+        public ActionResult DeleteAuthorById(int id, [FromHeader]string xApiKey)
         {
             _authorService.DeleteAuthorById(id);
             return NoContent();
@@ -86,7 +86,7 @@ namespace TechnicalRadiation.Controllers
          // Post api/authors/1/newsItems/1
         [Route("{authorId:int}/newsItems/{newsItemId:int}")]
         [HttpPost]
-        public IActionResult CreateNewAuthor(int authorId, int newsItemId)
+        public IActionResult LinkAuthorToNewsItem(int authorId, int newsItemId)
         {
             _authorService.LinkAuthorToNewsItem(authorId, newsItemId);
             return Ok();

@@ -6,7 +6,7 @@ namespace TechnicalRadiation.Services.Interfaces
 {
     public interface ICategoryService
     {
-         IEnumerable<CategoryDto> getAllCategories();
+         IEnumerable<CategoryDto> GetAllCategories();
          CategoryDetailDto GetCategoryById(int id);
          int CreateNewCategory(CategoryInputModel category);
          void UpdateCategoryById(CategoryInputModel category, int id);
