@@ -1,32 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj": {}
+    "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj": {
+    "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj",
         "projectName": "TechnicalRadiation.Models",
-        "projectPath": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj",
-        "packagesPath": "C:\\Users\\IMJ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\IMJ\\Desktop\\Veft_proj1\\TechnicalRadiation.Models\\obj\\",
+        "projectPath": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Models\\TechnicalRadiation.Models.csproj",
+        "packagesPath": "C:\\Users\\Eythor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eythor\\Documents\\VEFT\\Large ass 1\\New folder\\TechnicalRadiation.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\IMJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Eythor\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.nuget.org/packages/Microsoft.AspNetCore.Razor.Design/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
@@ -42,10 +39,6 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "(, )"
-            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

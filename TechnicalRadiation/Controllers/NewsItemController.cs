@@ -40,19 +40,24 @@ namespace TechnicalRadiation.Controllers
         // POST api/
         [Route("")]
         [HttpPost]
-        public IActionResult CreateNewNewsItem([FromBody] NewsItemInputModel newsItem)
+        public IActionResult CreateNewNewsItem([FromBody] NewsItemInputModel newsItem, [FromHeader]string xApiKey)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Model is not properly formatted");
+            }
             int newId = _newsItemService.CreateNewNewsItem(newsItem);
             return CreatedAtRoute("GetNewsById", new { id = newId }, null);
         }
 
         [Route("{id:int}")]
         [HttpPut]
-        public IActionResult UpdateNewsItemById(int id, [FromBody]NewsItemInputModel news )
+        public IActionResult UpdateNewsItemById(int id, [FromBody]NewsItemInputModel news, [FromHeader]string xApiKey)
         {
-            if(!ModelState.IsValid){
-            return BadRequest("Model is not properly formatted");
-           }
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Model is not properly formatted");
+            }
             _newsItemService.UpdateNewsItemById(news, id);
             return NoContent();
         }
