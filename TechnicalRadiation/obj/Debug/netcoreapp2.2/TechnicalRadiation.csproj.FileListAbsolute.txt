@@ -1,9 +1,24 @@
-C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.csprojAssemblyReference.cache
-C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.csproj.CoreCompileInputs.cache
-C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.RazorAssemblyInfo.cache
-C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.RazorAssemblyInfo.cs
-C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.AssemblyInfoInputs.cache
-C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.AssemblyInfo.cs
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\bin\Debug\netcoreapp2.2\TechnicalRadiation.deps.json
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\bin\Debug\netcoreapp2.2\TechnicalRadiation.runtimeconfig.json
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\bin\Debug\netcoreapp2.2\TechnicalRadiation.runtimeconfig.dev.json
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\bin\Debug\netcoreapp2.2\TechnicalRadiation.dll
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\bin\Debug\netcoreapp2.2\TechnicalRadiation.pdb
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\bin\Debug\netcoreapp2.2\TechnicalRadiation.Models.dll
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\bin\Debug\netcoreapp2.2\TechnicalRadiation.Repositories.dll
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\bin\Debug\netcoreapp2.2\TechnicalRadiation.Services.dll
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\bin\Debug\netcoreapp2.2\TechnicalRadiation.Models.pdb
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\bin\Debug\netcoreapp2.2\TechnicalRadiation.Services.pdb
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\bin\Debug\netcoreapp2.2\TechnicalRadiation.Repositories.pdb
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.csprojAssemblyReference.cache
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.csproj.CoreCompileInputs.cache
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.RazorAssemblyInfo.cache
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.RazorAssemblyInfo.cs
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.AssemblyInfoInputs.cache
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.AssemblyInfo.cs
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.RazorTargetAssemblyInfo.cache
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.csproj.CopyComplete
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.dll
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.pdb
 C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\bin\Debug\netcoreapp2.2\TechnicalRadiation.deps.json
 C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\bin\Debug\netcoreapp2.2\TechnicalRadiation.runtimeconfig.json
 C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\bin\Debug\netcoreapp2.2\TechnicalRadiation.runtimeconfig.dev.json
@@ -15,6 +30,12 @@ C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\bin\Deb
 C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\bin\Debug\netcoreapp2.2\TechnicalRadiation.Models.pdb
 C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\bin\Debug\netcoreapp2.2\TechnicalRadiation.Services.pdb
 C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\bin\Debug\netcoreapp2.2\TechnicalRadiation.Repositories.pdb
+C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.csprojAssemblyReference.cache
+C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.csproj.CoreCompileInputs.cache
+C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.RazorAssemblyInfo.cache
+C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.RazorAssemblyInfo.cs
+C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.AssemblyInfoInputs.cache
+C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.AssemblyInfo.cs
 C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.RazorTargetAssemblyInfo.cache
 C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.csproj.CopyComplete
 C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation\obj\Debug\netcoreapp2.2\TechnicalRadiation.dll

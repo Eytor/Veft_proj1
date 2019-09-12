@@ -12,3 +12,17 @@ C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation.Service
 C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation.Services\obj\Debug\netstandard2.0\TechnicalRadiation.Services.csproj.CopyComplete
 C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation.Services\obj\Debug\netstandard2.0\TechnicalRadiation.Services.dll
 C:\Users\Eythor\Documents\VEFT\Large ass 1\New folder\TechnicalRadiation.Services\obj\Debug\netstandard2.0\TechnicalRadiation.Services.pdb
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Services\bin\Debug\netstandard2.0\TechnicalRadiation.Services.deps.json
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Services\bin\Debug\netstandard2.0\TechnicalRadiation.Services.dll
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Services\bin\Debug\netstandard2.0\TechnicalRadiation.Services.pdb
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Services\bin\Debug\netstandard2.0\TechnicalRadiation.Models.dll
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Services\bin\Debug\netstandard2.0\TechnicalRadiation.Repositories.dll
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Services\bin\Debug\netstandard2.0\TechnicalRadiation.Models.pdb
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Services\bin\Debug\netstandard2.0\TechnicalRadiation.Repositories.pdb
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Services\obj\Debug\netstandard2.0\TechnicalRadiation.Services.csprojAssemblyReference.cache
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Services\obj\Debug\netstandard2.0\TechnicalRadiation.Services.csproj.CoreCompileInputs.cache
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Services\obj\Debug\netstandard2.0\TechnicalRadiation.Services.AssemblyInfoInputs.cache
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Services\obj\Debug\netstandard2.0\TechnicalRadiation.Services.AssemblyInfo.cs
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Services\obj\Debug\netstandard2.0\TechnicalRadiation.Services.csproj.CopyComplete
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Services\obj\Debug\netstandard2.0\TechnicalRadiation.Services.dll
+C:\Users\IMJ\Desktop\Veft_proj1\TechnicalRadiation.Services\obj\Debug\netstandard2.0\TechnicalRadiation.Services.pdb

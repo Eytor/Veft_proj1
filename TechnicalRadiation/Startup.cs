@@ -10,6 +10,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using TechnicalRadiation.Repositories.Implementations;
+using TechnicalRadiation.Repositories.Interfaces;
+using TechnicalRadiation.Services;
+using TechnicalRadiation.Services.Implementations;
+using TechnicalRadiation.Services.Interfaces;
 
 namespace TechnicalRadiation
 {
@@ -25,6 +30,14 @@ namespace TechnicalRadiation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IAuthentication, Authentication>();
+            services.AddTransient<IAuthorRepository, AuthorRepository>();
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<INewsItemRepository, NewsItemRepository>();
+            services.AddTransient<INewsItemService, NewsItemService>();
+            services.AddTransient<ICategoryService, CategoryService>();
+            services.AddTransient<IAuthorService, AuthorService>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
