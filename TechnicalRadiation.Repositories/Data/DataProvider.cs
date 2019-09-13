@@ -13,6 +13,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 0,
           Title = "news",
+          ImgSource = "https://example.com/news/0",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -24,6 +25,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 1,
           Title = "news",
+          ImgSource = "https://example.com/news/1",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -35,6 +37,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 2,
           Title = "news",
+          ImgSource = "https://example.com/news/2",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -46,6 +49,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 3,
           Title = "news",
+          ImgSource = "https://example.com/news/3",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -57,6 +61,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 4,
           Title = "news",
+          ImgSource = "https://example.com/news/4",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -68,6 +73,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 5,
           Title = "news",
+          ImgSource = "https://example.com/news/5",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -79,6 +85,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 6,
           Title = "news",
+          ImgSource = "https://example.com/news/6",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -90,6 +97,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 7,
           Title = "news",
+          ImgSource = "https://example.com/news/7",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -101,6 +109,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 8,
           Title = "news",
+          ImgSource = "https://example.com/news/8",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -112,6 +121,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 9,
           Title = "news",
+          ImgSource = "https://example.com/news/9",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -123,6 +133,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 10,
           Title = "news",
+          ImgSource = "https://example.com/news/10",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -134,6 +145,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 11,
           Title = "news",
+          ImgSource = "https://example.com/news/11",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -145,6 +157,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 12,
           Title = "news",
+          ImgSource = "https://example.com/news/12",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -156,6 +169,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 13,
           Title = "news",
+          ImgSource = "https://example.com/news/13",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -167,6 +181,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 14,
           Title = "news",
+          ImgSource = "https://example.com/news/14",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -178,6 +193,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 15,
           Title = "news",
+          ImgSource = "https://example.com/news/15",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -189,6 +205,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 16,
           Title = "news",
+          ImgSource = "https://example.com/news/16",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -200,6 +217,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 17,
           Title = "news",
+          ImgSource = "https://example.com/news/17",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -211,6 +229,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 18,
           Title = "news",
+          ImgSource = "https://example.com/news/18",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -222,6 +241,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 19,
           Title = "news",
+          ImgSource = "https://example.com/news/19",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -233,6 +253,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 20,
           Title = "news",
+          ImgSource = "https://example.com/news/20",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -244,6 +265,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 21,
           Title = "news",
+          ImgSource = "https://example.com/news/21",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -255,6 +277,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 22,
           Title = "news",
+          ImgSource = "https://example.com/news/22",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -266,6 +289,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 23,
           Title = "news",
+          ImgSource = "https://example.com/news/23",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -277,6 +301,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 24,
           Title = "news",
+          ImgSource = "https://example.com/news/24",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -288,6 +313,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 25,
           Title = "news",
+          ImgSource = "https://example.com/news/25",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
@@ -299,6 +325,7 @@ namespace TechnicalRadiation.Repositories.Data
       {
           Id = 26,
           Title = "news",
+          ImgSource = "https://example.com/news/26",
           ShortDescription = "A short description of the news article",
           LongDescription ="A full description of the news article",
           PublishDate = DateTime.Now,
