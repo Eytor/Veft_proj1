@@ -10,16 +10,16 @@ using TechnicalRadiation.Repositories.Data;
 
 namespace TechnicalRadiation.Services
 {
-    public class Authorization : IAuthorization
+    public class Authentication : IAuthentication
 
     {
         public IConfiguration Config { get;  }
-        public Authorization(IConfiguration config)
+        public Authentication(IConfiguration config)
         {
           this.Config = config;
         }
 
-        public bool Authorization(string secret)
+        public bool Authenticate(string secret)
         {
             var secretKey = Config.GetValue<string>("secretKey");
             if (secretKey == secret)

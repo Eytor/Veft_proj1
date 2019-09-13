@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
 using Microsoft.Extensions.Configuration;
 using TechnicalRadiation.Models.InputModels;
 using TechnicalRadiation.Services;
@@ -11,8 +12,8 @@ namespace TechnicalRadiation.Controllers
     public class AuthorController : ControllerBase
     {
         public IConfiguration Config { get; }
-        public IAuthorization Authorization { get; }
 
+        public IAuthentication Authentication { get; }
         private readonly IAuthorService _authorService;
 
         public AuthorController(IAuthorService authorService, IConfiguration config, IAuthentication authentication)
@@ -22,7 +23,7 @@ namespace TechnicalRadiation.Controllers
             Config = config;
         }
 
-         // GET api/authors
+        // GET api/authors
         [Route("")]
         [HttpGet]
         public IActionResult GetAllAuthors([FromQuery] int pageSize, [FromQuery] int pageNumber)
@@ -46,14 +47,14 @@ namespace TechnicalRadiation.Controllers
             return Ok(_authorService.GetNewsByAuthorId(id));
         }
 
-         // Post api/authors
+        // Post api/authors
         [Route("")]
         [HttpPost]
         public IActionResult CreateNewAuthor([FromBody] AuthorInputModel newAuthor, [FromHeader]string Authorization)
         {
             if (Authentication.Authenticate(Authorization) == false)
             {
-                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+                return Unauthorized();
             }
             if (!ModelState.IsValid)
             {
@@ -68,11 +69,11 @@ namespace TechnicalRadiation.Controllers
         // PUT api/authors/1
         [Route("{id:int}")]
         [HttpPut]
-        public IActionResult UpdateAuthorById( int id, [FromBody] AuthorInputModel author, [FromHeader]string Authorization)
+        public IActionResult UpdateAuthorById(int id, [FromBody] AuthorInputModel author, [FromHeader]string Authorization)
         {
             if (Authentication.Authenticate(Authorization) == false)
             {
-                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+                return Unauthorized();
             }
             if (!ModelState.IsValid)
             {
@@ -89,13 +90,13 @@ namespace TechnicalRadiation.Controllers
         {
             if (Authentication.Authenticate(Authorization) == false)
             {
-                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+                return Unauthorized();
             }
             _authorService.DeleteAuthorById(id);
             return NoContent();
         }
 
-         // Post api/authors/1/newsItems/1
+        // Post api/authors/1/newsItems/1
         [Route("{authorId:int}/newsItems/{newsItemId:int}")]
         [HttpPost]
         public IActionResult LinkAuthorToNewsItem(int authorId, int newsItemId)

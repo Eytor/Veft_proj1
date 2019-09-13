@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using TechnicalRadiation.Models;
 using TechnicalRadiation.Models.Dtos;
 using TechnicalRadiation.Models.Entities;
@@ -17,31 +18,32 @@ namespace TechnicalRadiation.Services.Implementations
 
         public Envelope<NewsItemDto> GetAllNewsItems(int pageSize, int pageNumber)
         {
-            var news = _newsItemRepository.GetAllNewsItems();
-            foreach (var newsItem in news)
+            return new Envelope<NewsItemDto>(pageNumber, pageSize == 0 ? 25 : pageSize, _newsItemRepository.GetAllNewsItems().Select(r =>
             {
-                Link generalLink = new Link { href = $"api/{newsItem.Id}" };
+                Link generalLink = new Link { href = $"api/{r.Id}" };
                 // Generate Links for all authors on this object
-                var authorIds = _newsItemRepository.GetAllAuthorIdsByNewsId(newsItem.Id);
+                var authorIds = _newsItemRepository.GetAllAuthorIdsByNewsId(r.Id);
                 List<Link> authorLinks = new List<Link>();
                 foreach (var authorId in authorIds)
                 {
                     authorLinks.Add(new Link { href = $"api/authors/{authorId}" });
                 }
+
                 // Generate links for all categories for this news story
-                var categoryIds = _newsItemRepository.GetAllCategoryIdsByNewsId(newsItem.Id);
+                var categoryIds = _newsItemRepository.GetAllCategoryIdsByNewsId(r.Id);
                 List<Link> categoryLinks = new List<Link>();
                 foreach (var categoryId in categoryIds)
                 {
                     categoryLinks.Add(new Link { href = $"api/categories/{categoryId}" });
                 }
-                newsItem.Links.AddReference("self", generalLink);
-                newsItem.Links.AddReference("edit", generalLink);
-                newsItem.Links.AddReference("delete", generalLink);
-                newsItem.Links.AddListReference("authors", authorLinks);
-                newsItem.Links.AddListReference("categories", categoryLinks);
-            }
-            return new Envelope<NewsItemDto>(pageNumber, pageSize == 0 ? 25 : pageSize, news);
+
+                r.Links.AddReference("self", generalLink);
+                r.Links.AddReference("edit", generalLink);
+                r.Links.AddReference("delete", generalLink);
+                r.Links.AddListReference("authors", authorLinks);
+                r.Links.AddListReference("categories", categoryLinks);
+                return r;
+            }));
         }
 
         public NewsItemDetailDto GetNewsById(int id)

@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
 using Microsoft.Extensions.Configuration;
 using TechnicalRadiation.Models.InputModels;
 using TechnicalRadiation.Services;
@@ -11,8 +12,8 @@ namespace TechnicalRadiation.Controllers
     public class CategoryController : Controller
     {
         public IConfiguration Config { get; }
-        public IAuthorization Authorization { get; }
 
+        public IAuthentication Authentication { get; }
         private readonly ICategoryService _categoryService;
 
         public CategoryController(ICategoryService categoryService, IConfiguration config, IAuthentication authentication)
@@ -22,7 +23,7 @@ namespace TechnicalRadiation.Controllers
             Config = config;
         }
 
-         // GET api/categories
+        // GET api/categories
         [Route("")]
         [HttpGet]
         public IActionResult GetAllCategories()
@@ -39,14 +40,14 @@ namespace TechnicalRadiation.Controllers
         }
 
 
-         // Post api/categories
+        // Post api/categories
         [Route("")]
         [HttpPost]
         public IActionResult CreateNewCategory([FromBody] CategoryInputModel newCategory, [FromHeader]string Authorization)
         {
             if (Authentication.Authenticate(Authorization) == false)
             {
-                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+                return Unauthorized();
             }
             if (!ModelState.IsValid)
             {
@@ -61,11 +62,11 @@ namespace TechnicalRadiation.Controllers
         // PUT api/categories/1
         [Route("{id:int}")]
         [HttpPut]
-        public IActionResult UpdateAuthorById( int id, [FromBody] CategoryInputModel category, [FromHeader]string Authorization)
+        public IActionResult UpdateAuthorById(int id, [FromBody] CategoryInputModel category, [FromHeader]string Authorization)
         {
             if (Authentication.Authenticate(Authorization) == false)
             {
-                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+                return Unauthorized();
             }
             if (!ModelState.IsValid)
             {
@@ -82,13 +83,13 @@ namespace TechnicalRadiation.Controllers
         {
             if (Authentication.Authenticate(Authorization) == false)
             {
-                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+                return Unauthorized();
             }
             _categoryService.DeleteCategoryById(id);
             return NoContent();
         }
 
-         // Post api/categories/1/newsItems/1
+        // Post api/categories/1/newsItems/1
         [Route("{categoryId:int}/newsItems/{newsItemId:int}")]
         [HttpPost]
         public IActionResult LinkNewsToCategory(int categoryId, int newsItemId)

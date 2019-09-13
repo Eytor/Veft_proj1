@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
 using Microsoft.Extensions.Configuration;
 using TechnicalRadiation.Models.InputModels;
 using TechnicalRadiation.Services;
@@ -11,14 +12,14 @@ namespace TechnicalRadiation.Controllers
     public class NewsItemController : ControllerBase
     {
         public IConfiguration Config { get; }
-        public IAuthorization Authorization { get; }
 
+        public IAuthentication Authentication { get; }
         private readonly INewsItemService _newsItemService;
 
-        public NewsItemController(INewsItemService newsItemService, IConfiguration config, IAuthorization authorization)
+        public NewsItemController(INewsItemService newsItemService, IConfiguration config, IAuthentication authentication)
         {
             _newsItemService = newsItemService;
-            Authorization = authorization;
+            Authentication = authentication;
             Config = config;
         }
 
@@ -27,7 +28,7 @@ namespace TechnicalRadiation.Controllers
         [HttpGet]
         public IActionResult GetAllNews([FromQuery] int pageSize, [FromQuery] int pageNumber)
         {
-            return Ok(_newsItemService.GetAllNewsItems(pageSize, pageNumber));
+            return Unauthorized();
         }
 
         [Route("{id:int}", Name = "GetNewsById")]
@@ -44,7 +45,7 @@ namespace TechnicalRadiation.Controllers
         {
             if (Authentication.Authenticate(Authorization) == false)
             {
-                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+                return Unauthorized();
             }
             if (!ModelState.IsValid)
             {
@@ -60,7 +61,7 @@ namespace TechnicalRadiation.Controllers
         {
             if (Authentication.Authenticate(Authorization) == false)
             {
-                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+                return Unauthorized();
             }
             if (!ModelState.IsValid)
             {
@@ -76,7 +77,7 @@ namespace TechnicalRadiation.Controllers
         {
             if (Authentication.Authenticate(Authorization) == false)
             {
-                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+                return Unauthorized();
             }
             _newsItemService.DeleteNewsById(id);
             return NoContent();
