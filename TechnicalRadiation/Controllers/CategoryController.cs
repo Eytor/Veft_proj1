@@ -36,7 +36,12 @@ namespace TechnicalRadiation.Controllers
         [HttpGet]
         public ActionResult<string> GetCategoryById(int id)
         {
-            return Ok(_categoryService.GetCategoryById(id));
+            var category =_categoryService.GetCategoryById(id);
+            if (category == null)
+            {
+                return NotFound();
+            }
+            return Ok(category);
         }
 
 
@@ -72,7 +77,17 @@ namespace TechnicalRadiation.Controllers
             {
                 return BadRequest("Model is not properly formatted");
             }
-            _categoryService.UpdateCategoryById(category, id);
+
+            // Return 404 if category is not found
+            try
+            {
+                _categoryService.UpdateCategoryById(category, id);
+            }
+            catch (System.Exception)
+            {
+                return NotFound();
+            }
+
             return NoContent();
         }
 
@@ -85,7 +100,15 @@ namespace TechnicalRadiation.Controllers
             {
                 return Unauthorized();
             }
-            _categoryService.DeleteCategoryById(id);
+            // Return 404 if category is not found
+            try
+            {
+                _categoryService.DeleteCategoryById(id);
+            }
+            catch (System.Exception)
+            {
+                return NotFound();
+            }
             return NoContent();
         }
 
@@ -98,7 +121,16 @@ namespace TechnicalRadiation.Controllers
             {
                 return Unauthorized();
             }
-            _categoryService.LinkNewsItemToCategory(categoryId, newsItemId);
+            // Return 404 if category or news are not found
+            try
+            {
+                _categoryService.LinkNewsItemToCategory(categoryId, newsItemId);
+            }
+            catch (System.Exception)
+            {
+                return NotFound();
+            }
+
             return Ok();
         }
 
