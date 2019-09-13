@@ -28,7 +28,7 @@ namespace TechnicalRadiation.Controllers
         [HttpGet]
         public IActionResult GetAllNews([FromQuery] int pageSize, [FromQuery] int pageNumber)
         {
-            return Unauthorized();
+            return Ok(_newsItemService.GetAllNewsItems(pageSize, pageNumber));
         }
 
         [Route("{id:int}", Name = "GetNewsById")]
