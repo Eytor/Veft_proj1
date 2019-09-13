@@ -37,7 +37,6 @@ namespace TechnicalRadiation
             services.AddTransient<INewsItemService, NewsItemService>();
             services.AddTransient<ICategoryService, CategoryService>();
             services.AddTransient<IAuthorService, AuthorService>();
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

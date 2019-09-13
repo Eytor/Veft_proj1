@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
 using Microsoft.Extensions.Configuration;
 using TechnicalRadiation.Models.InputModels;
 using TechnicalRadiation.Services;
@@ -40,8 +41,12 @@ namespace TechnicalRadiation.Controllers
         // POST api/
         [Route("")]
         [HttpPost]
-        public IActionResult CreateNewNewsItem([FromBody] NewsItemInputModel newsItem, [FromHeader]string xApiKey)
+        public IActionResult CreateNewNewsItem([FromBody] NewsItemInputModel newsItem, [FromHeader]string Authorization)
         {
+            if (Authentication.Authenticate(Authorization) == false)
+            {
+                return Unauthorized();
+            }
             if (!ModelState.IsValid)
             {
                 return BadRequest("Model is not properly formatted");
@@ -52,8 +57,12 @@ namespace TechnicalRadiation.Controllers
 
         [Route("{id:int}")]
         [HttpPut]
-        public IActionResult UpdateNewsItemById(int id, [FromBody]NewsItemInputModel news, [FromHeader]string xApiKey)
+        public IActionResult UpdateNewsItemById(int id, [FromBody]NewsItemInputModel news, [FromHeader]string Authorization)
         {
+            if (Authentication.Authenticate(Authorization) == false)
+            {
+                return Unauthorized();
+            }
             if (!ModelState.IsValid)
             {
                 return BadRequest("Model is not properly formatted");
@@ -64,8 +73,12 @@ namespace TechnicalRadiation.Controllers
 
         [Route("{id:int}")]
         [HttpDelete]
-        public ActionResult Delete(int id, [FromHeader]string xApiKey)
+        public ActionResult Delete(int id, [FromHeader]string Authorization)
         {
+            if (Authentication.Authenticate(Authorization) == false)
+            {
+                return Unauthorized();
+            }
             _newsItemService.DeleteNewsById(id);
             return NoContent();
         }

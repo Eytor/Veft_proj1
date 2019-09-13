@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
 using Microsoft.Extensions.Configuration;
 using TechnicalRadiation.Models.InputModels;
 using TechnicalRadiation.Services;
@@ -22,7 +23,7 @@ namespace TechnicalRadiation.Controllers
             Config = config;
         }
 
-         // GET api/categories
+        // GET api/categories
         [Route("")]
         [HttpGet]
         public IActionResult GetAllCategories()
@@ -39,11 +40,15 @@ namespace TechnicalRadiation.Controllers
         }
 
 
-         // Post api/categories
+        // Post api/categories
         [Route("")]
         [HttpPost]
-        public IActionResult CreateNewCategory([FromBody] CategoryInputModel newCategory, [FromHeader]string xApiKey)
+        public IActionResult CreateNewCategory([FromBody] CategoryInputModel newCategory, [FromHeader]string Authorization)
         {
+            if (Authentication.Authenticate(Authorization) == false)
+            {
+                return Unauthorized();
+            }
             if (!ModelState.IsValid)
             {
                 return BadRequest("Model is not properly formatted");
@@ -57,8 +62,12 @@ namespace TechnicalRadiation.Controllers
         // PUT api/categories/1
         [Route("{id:int}")]
         [HttpPut]
-        public IActionResult UpdateAuthorById( int id, [FromBody] CategoryInputModel category, [FromHeader]string xApiKey)
+        public IActionResult UpdateAuthorById(int id, [FromBody] CategoryInputModel category, [FromHeader]string Authorization)
         {
+            if (Authentication.Authenticate(Authorization) == false)
+            {
+                return Unauthorized();
+            }
             if (!ModelState.IsValid)
             {
                 return BadRequest("Model is not properly formatted");
@@ -70,17 +79,25 @@ namespace TechnicalRadiation.Controllers
         // DELETE api/categories/1
         [Route("{id:int}")]
         [HttpDelete]
-        public ActionResult DeleteCategoryById(int id, [FromHeader]string xApiKey)
+        public ActionResult DeleteCategoryById(int id, [FromHeader]string Authorization)
         {
+            if (Authentication.Authenticate(Authorization) == false)
+            {
+                return Unauthorized();
+            }
             _categoryService.DeleteCategoryById(id);
             return NoContent();
         }
 
-         // Post api/categories/1/newsItems/1
+        // Post api/categories/1/newsItems/1
         [Route("{categoryId:int}/newsItems/{newsItemId:int}")]
         [HttpPost]
-        public IActionResult LinkNewsToCategory(int categoryId, int newsItemId)
+        public IActionResult LinkNewsToCategory(int categoryId, int newsItemId, [FromHeader]string Authorization)
         {
+            if (Authentication.Authenticate(Authorization) == false)
+            {
+                return Unauthorized();
+            }
             _categoryService.LinkNewsItemToCategory(categoryId, newsItemId);
             return Ok();
         }
