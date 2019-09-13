@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using TechnicalRadiation.Models;
 using TechnicalRadiation.Models.Dtos;
 using TechnicalRadiation.Models.Entities;
@@ -17,8 +18,7 @@ namespace TechnicalRadiation.Services.Implementations
 
         public IEnumerable<AuthorDto> GetAllAuthors()
         {
-            var authors = _authorRepository.GetAllAuthors();
-            foreach (var author in authors)
+            return _authorRepository.GetAllAuthors().Select(author =>
             {
                 Link generalLink = new Link { href = $"api/authors/{author.Id}" };
                 Link newsItemsLink = new Link { href = $"api/authors/{author.Id}/newsItems" };
@@ -36,8 +36,8 @@ namespace TechnicalRadiation.Services.Implementations
                 author.Links.AddReference("delete", generalLink);
                 author.Links.AddReference("newsItems", newsItemsLink);
                 author.Links.AddListReference("newsItemDetailed", NewsItemDetailedLinks);
-            }
-            return authors;
+                return author;
+            });
         }
 
         public AuthorDetailDto GetAuthorById(int id)
@@ -67,8 +67,7 @@ namespace TechnicalRadiation.Services.Implementations
 
         public IEnumerable<NewsItemDto> GetNewsByAuthorId(int id)
         {
-            var news =_authorRepository.GetNewsByAuthorId(id);
-            foreach (var newsItem in news)
+            return _authorRepository.GetNewsByAuthorId(id).Select(newsItem =>
             {
                 Link generalLink = new Link { href = $"api/{newsItem.Id}" };
                 // Generate Links for all authors on this object
@@ -90,8 +89,8 @@ namespace TechnicalRadiation.Services.Implementations
                 newsItem.Links.AddReference("delete", generalLink);
                 newsItem.Links.AddListReference("authors", authorLinks);
                 newsItem.Links.AddListReference("categories", categoryLinks);
-            }
-            return news;
+                return newsItem;
+            });
         }
 
         public int CreateNewAuthor(AuthorInputModel author)

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using TechnicalRadiation.Models;
 using TechnicalRadiation.Models.Dtos;
 using TechnicalRadiation.Models.Entities;
@@ -17,16 +18,16 @@ namespace TechnicalRadiation.Services.Implementations
 
         public IEnumerable<CategoryDto> GetAllCategories()
         {
-            var categories = _categoryRepository.getAllCategories();
-            foreach (var category in categories)
+            return _categoryRepository.getAllCategories().Select(category =>
             {
+                // Adding links to categories
                 Link generalLink = new Link { href = $"api/categories/{category.Id}" };
 
                 category.Links.AddReference("self", generalLink);
                 category.Links.AddReference("edit", generalLink);
                 category.Links.AddReference("delete", generalLink);
-            }
-            return categories;
+                return category;
+            });
         }
 
         public CategoryDetailDto GetCategoryById(int id)
