@@ -28,6 +28,15 @@ namespace TechnicalRadiation.Controllers
         [HttpGet]
         public IActionResult GetAllAuthors([FromQuery] int pageSize, [FromQuery] int pageNumber)
         {
+            try
+            {
+                _authorService.GetAllAuthors();
+            }
+            catch (System.Exception)
+            {
+
+                return NotFound();
+            }
             return Ok(_authorService.GetAllAuthors());
         }
 
