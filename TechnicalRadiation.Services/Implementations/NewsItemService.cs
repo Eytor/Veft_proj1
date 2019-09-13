@@ -89,7 +89,7 @@ namespace TechnicalRadiation.Services.Implementations
         public void DeleteNewsById(int id)
         {
             if (!_newsItemRepository.NewsItemExists(id)) { throw new Exception($"category not found"); }
-            throw new System.NotImplementedException();
+            _newsItemRepository.DeleteNewsById(id);
         }
     }
 }
