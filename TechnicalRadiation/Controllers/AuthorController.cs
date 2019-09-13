@@ -99,8 +99,12 @@ namespace TechnicalRadiation.Controllers
         // Post api/authors/1/newsItems/1
         [Route("{authorId:int}/newsItems/{newsItemId:int}")]
         [HttpPost]
-        public IActionResult LinkAuthorToNewsItem(int authorId, int newsItemId)
+        public IActionResult LinkAuthorToNewsItem(int authorId, int newsItemId, [FromHeader]string Authorization)
         {
+            if (Authentication.Authenticate(Authorization) == false)
+            {
+                return Unauthorized();
+            }
             _authorService.LinkAuthorToNewsItem(authorId, newsItemId);
             return Ok();
         }

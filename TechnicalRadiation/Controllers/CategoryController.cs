@@ -92,8 +92,12 @@ namespace TechnicalRadiation.Controllers
         // Post api/categories/1/newsItems/1
         [Route("{categoryId:int}/newsItems/{newsItemId:int}")]
         [HttpPost]
-        public IActionResult LinkNewsToCategory(int categoryId, int newsItemId)
+        public IActionResult LinkNewsToCategory(int categoryId, int newsItemId, [FromHeader]string Authorization)
         {
+            if (Authentication.Authenticate(Authorization) == false)
+            {
+                return Unauthorized();
+            }
             _categoryService.LinkNewsItemToCategory(categoryId, newsItemId);
             return Ok();
         }
