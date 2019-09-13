@@ -10,7 +10,8 @@ using TechnicalRadiation.Repositories.Interfaces;
 
 namespace TechnicalRadiation.Repositories.Implementations
 {
-    public class AuthorRepository : IAuthorRepository
+    public class AuthorRepository : 
+        horRepository
     {
         private static readonly string _admin = "TechnicalRadiationAdmin";
         public IEnumerable<AuthorDto> GetAllAuthors()

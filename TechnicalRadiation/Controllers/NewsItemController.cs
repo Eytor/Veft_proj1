@@ -15,10 +15,10 @@ namespace TechnicalRadiation.Controllers
 
         private readonly INewsItemService _newsItemService;
 
-        public NewsItemController(INewsItemService newsItemService, IConfiguration config, IAuthentication authentication)
+        public NewsItemController(INewsItemService newsItemService, IConfiguration config, IAuthorization authorization)
         {
             _newsItemService = newsItemService;
-            Authentication = authentication;
+            Authorization = authorization;
             Config = config;
         }
 
